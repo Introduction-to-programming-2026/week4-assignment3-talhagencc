@@ -23,3 +23,21 @@ Rules:
 - No recursion allowed.
 - Output must match exactly.
 */
+#include <stdio.h>
+
+int main(void)
+{
+    int number;
+
+    // Get number from user
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Loop number of times
+    for (int i = 0; i < number; i++)
+    {
+        printf("Hello %d\n", i + 1);
+    }
+
+    return 0;
+}
