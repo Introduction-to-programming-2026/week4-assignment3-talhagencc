@@ -1,43 +1,32 @@
-/*
-WEEK 1 — TASK 1 (Iteration)
+// Draws a pyramid using iteration (without CS50)
 
-Goal:
-Practice loops and input validation.
-
-Task:
-1. Ask the user for a positive integer n.
-2. If n < 1, ask again until valid.
-3. Print a half-pyramid using # symbols.
-
-Example:
-Input: 4
-
-Output:
-#
-##
-###
-####
-
-Rules:
-- You must use loops (for or while).
-- No recursion allowed.
-- Output must match exactly.
-*/
 #include <stdio.h>
+
+void draw(int n);
 
 int main(void)
 {
-    int number;
+    int height;
 
-    // Get number from user
-    printf("Enter a number: ");
-    scanf("%d", &number);
+    // Get height of pyramid
+    printf("Height: ");
+    scanf("%d", &height);
 
-    // Loop number of times
-    for (int i = 0; i < number; i++)
-    {
-        printf("Hello %d\n", i + 1);
-    }
+    // Draw pyramid
+    draw(height);
 
     return 0;
+}
+
+void draw(int n)
+{
+    // Draw pyramid of height n
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 }
